@@ -1,94 +1,301 @@
-.flex,
-.nav-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.primary-navigation {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.primary-navigation a {
-    text-decoration: none;
-}
-
-.primary-navigation li {
-    padding: 1rem;
-}
-
-#active {
-    color: var(--company-color);
-}
-
-.header {
-    height: 600px;
-    max-width: 1600px;
-    margin: auto;
-}
-
-.header-image {
-    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .50) 30%, transparent 20%), url(/assets/images/49379-39377820-l-scaled.jpeg);
-    background-size: center;
-    background-repeat: no-repeat;
-    background-position: 50% 60%;
-    position: relative;
-}
-
-.company-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media (max-width: 700px) {
-    .primary-navigation {
-        position: fixed;
-        z-index: 1000;
-        inset: 0 0 0 30%;
-        flex-direction: column;
-        padding: min(10vh, 10rem) 2em;
-        background: var(--company-color);
-        transform: translateX(100%);
-        transition: transform 350ms ease-out;
+    .flex,
+    .nav-center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-    /* primary nav on other pages */
-    /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
+    
+    .primary-navigation {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .primary-navigation a {
+        text-decoration: none;
+        font-size: var(--size-20);
+    }
+    
+    .primary-navigation a:hover {
+        color: var(--company-color);
+    }
+    
+    .primary-navigation li {
+        padding: 1rem;
+    }
+    
+    #active {
+        color: var(--company-color);
+    }
+    
+    .header {
+        height: 600px;
+        max-width: 1600px;
+        margin: auto;
+    }
+    
+    .header-image {
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 30%, transparent 20%), url(/assets/images/49379-39377820-l-scaled.jpeg);
+        background-size: center;
+        background-repeat: no-repeat;
+        background-position: 50% 60%;
+        position: relative;
+    }
+    
+    .company-logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    /* ===== CARDS ===== */
+    
+    .flip-cards {
+        padding-top: 5rem;
+    }
+    
+    .card-grid {
+        display: grid;
+        grid-template-areas: "1 2" "3 4" "5 .";
+        gap: 2rem;
+    }
+    
+    .card {
+        width: 600px;
+    }
+    
+    .card>.card5 {
+        width: 1233px;
+    }
+    
+    .card__content {
+        text-align: center;
+        position: relative;
+        padding: 7em 11em;
+        transition: transform 1s;
+        transform-style: preserve-3d;
+    }
+    
+    .card:hover .card__content {
+        transform: rotateY(.5turn);
+    }
+    
+    .card__front,
+    .card__back {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 5em 3em;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        display: grid;
+        align-content: center;
+    }
+    
+    .front1 {
+        background-color: var(--clr);
+        background-image: url(/assets/images/Air-Conditioning-Gold-Coast-1.jpg);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+    }
+    
+    .front2 {
+        background-color: var(--clr);
+        background-image: url(/assets/images/738903160-H-1024x700.webp);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+    }
+    
+    .front3 {
+        background-color: var(--clr);
+        background-image: url(/assets/images/Air-Conditioning-Home-Owner-Guide.jpg);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+    }
+    
+    .front4 {
+        background-color: var(--clr);
+        background-image: url(/assets/images/49379-39377820-l-scaled.jpeg);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+    }
+    
+    .front5 {
+        background-color: var(--clr);
+        background-image: url(/assets/images/ac.jpg);
+        background-size: cover;
+        background-blend-mode: overlay;
+        color: #333;
+    }
+    
+    .card__front::before {
+        content: '';
+        position: absolute;
+        --spacer: 1em;
+        top: var(--spacer);
+        bottom: var(--spacer);
+        left: var(--spacer);
+        right: var(--spacer);
+        border: 3px solid currentColor;
+        transform: var(--level-one);
+    }
+    
+    .card__title {
+        font-size: 3.5rem;
+        transform: var(--level-three);
+        order: 2;
+        text-transform: uppercase;
+    }
+    
+    .card__subtitle {
+        transform: var(--level-two);
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: .75rem;
+        font-weight: var(--fw-bold);
+        opacity: .7;
+    }
+    
+    .card__body {
+        transform: var(--level-two);
+        font-weight: var(fw-normal);
+        font-size: 1.5rem;
+        line-height: 1.6;
+        color: var(--white);
+    }
+    
+    .card__back {
+        transform: rotateY(.5turn);
+        color: var(--clr);
+        background: var(--company-color);
+    }
+    
+    .card1 {
+        /* display: grid; */
+        grid-area: 1;
+    }
+    
+    .card2 {
+        /* display: grid; */
+        grid-area: 2;
+    }
+    
+    .card3 {
+        /* display: grid; */
+        grid-area: 3;
+    }
+    
+    .card4 {
+        /* display: grid; */
+        grid-area: 4;
+    }
+    
+    .card5 {
+        /* display: grid; */
+        grid-area: 5;
+    }
+    
+    .card__btn {
+        margin: auto;
+        padding: 0 1rem;
+        max-width: 25rem;
+        align-self: center;
+        background-color: var(--white);
+        color: var(--black);
+        border-radius: 10px;
+        border: white solid;
+        font-size: var(--size-20);
+    }
+    
+    .card__btn,
+    a {
+        text-decoration: none;
+    }
+    /* ===== REVIEWS AREA ===== */
+    /* need to figure out the width issue here. */
+    
+    .reviews {
+        margin-top: 10rem;
+    }
+    
+    .review-content {
+        height: 30rem;
+        /* margin-top: 10rem; */
+        background-color: var(--company-color);
+    }
+    /* ===== Product area ===== */
+    
+    .products {
+        margin: 10rem 0;
+        line-height: 2;
+    }
+    
+    .product-flex {
+        display: flex;
+        align-items: center;
+    }
+    
+    .product-desc a {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .product-image {
+        margin-left: auto;
+    }
+    /* ========================================== */
+    
+    @media (max-width: 700px) {
+        .primary-navigation {
+            position: fixed;
+            z-index: 1000;
+            inset: 0 0 0 30%;
+            flex-direction: column;
+            padding: min(10vh, 10rem) 2em;
+            background: var(--company-color);
+            transform: translateX(100%);
+            transition: transform 350ms ease-out;
+        }
+        /* primary nav on other pages */
+        /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
             height: 150px;
             background-color:black; */
-    /* ===== */
-    .primary-navigation li {
-        padding: 2rem;
-    }
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0%);
-    }
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        background-color: transparent;
-        background-image: url(/assets/icons/icon-hamburger.svg);
-        background-repeat: no-repeat;
-        border: 0;
-        width: 2rem;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
-    }
-    .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url(/assets/icons/icon-close.svg);
-    }
-    /* .logo {
+        /* ===== */
+        .primary-navigation li {
+            padding: 2rem;
+        }
+        .primary-navigation[data-visible="true"] {
+            transform: translateX(0%);
+        }
+        .mobile-nav-toggle {
+            display: block;
+            position: absolute;
+            z-index: 9999;
+            background-color: transparent;
+            background-image: url(/assets/icons/icon-hamburger.svg);
+            background-repeat: no-repeat;
+            border: 0;
+            width: 2rem;
+            aspect-ratio: 1;
+            top: 2rem;
+            right: 2rem;
+        }
+        .mobile-nav-toggle[aria-expanded="true"] {
+            background-image: url(/assets/icons/icon-close.svg);
+        }
+        /* .logo {
         display: none;
         margin: auto;
     }
     .mobile-logo {
         display: block;
     } */
-    #active {
-        color: var(--white);
+        #active {
+            color: var(--white);
+        }
     }
-}
