@@ -38,7 +38,7 @@
     box-sizing: border-box;
     font-family: 'Gudea', sans-serif;
     /* font-family: 'Roboto', sans-serif; */
-    color: var(--black);
+    /* color: var(--black); */
 }
 
 button {

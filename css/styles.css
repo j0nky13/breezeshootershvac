@@ -1,3 +1,5 @@
+    /* navigation area */
+    
     .flex,
     .nav-center {
         display: flex;
@@ -14,6 +16,7 @@
     .primary-navigation a {
         text-decoration: none;
         font-size: var(--size-20);
+        color: var(--black);
     }
     
     .primary-navigation a:hover {
@@ -27,6 +30,8 @@
     #active {
         color: var(--company-color);
     }
+    /* end nav bar */
+    /* start header/header image */
     
     .header {
         height: 600px;
@@ -47,7 +52,8 @@
         align-items: center;
         justify-content: center;
     }
-    /* ===== CARDS ===== */
+    /* end header/header image */
+    /* ===== start CARDS ===== */
     
     .flip-cards {
         padding-top: 5rem;
@@ -216,18 +222,39 @@
     a {
         text-decoration: none;
     }
+    /* .card_btn a:hover {
+        border: 1px var(--white) solid;
+        background-color: var(--company-color);
+        color: var(--white);
+    } */
+    /* end cards */
     /* ===== REVIEWS AREA ===== */
-    /* need to figure out the width issue here. */
     
     .reviews {
         margin-top: 10rem;
+    }
+    
+    .review-header {
+        text-align: center;
+        padding: 2rem 0;
+        color: var(--white);
+    }
+    
+    .review-header h2 {
+        font-size: var(--size-30);
+    }
+    
+    .review-header p {
+        font-size: var(--size-20);
     }
     
     .review-content {
         height: 30rem;
         /* margin-top: 10rem; */
         background-color: var(--company-color);
+        max-width: 1600px;
     }
+    /* end reviews */
     /* ===== Product area ===== */
     
     .products {
@@ -240,14 +267,40 @@
         align-items: center;
     }
     
-    .product-desc a {
+    .product-desc h2 {
+        font-size: var(--size-30);
+    }
+    
+    .product-desc {
+        font-size: var(--size-20);
+    }
+    
+    .product-desc>a {
+        border: 1px solid black;
+        border-radius: 10px;
+        max-width: fit-content;
+        margin: 1rem auto;
+        padding: 0 2rem;
         display: flex;
         justify-content: center;
+        color: var(--black);
+    }
+    
+    .product-desc>a:hover {
+        background-color: var(--company-color);
+        color: var(--white);
+        border: 1px solid white;
+        border-radius: 10px;
     }
     
     .product-image {
         margin-left: auto;
     }
+    /*  end product area */
+    /* start job area */
+    /* end job area */
+    /* start footer */
+    /* end footer */
     /* ========================================== */
     
     @media (max-width: 700px) {
