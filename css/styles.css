@@ -298,9 +298,61 @@
     }
     /*  end product area */
     /* start job area */
+    
+    .jobs {
+        margin: 2rem 0;
+        background-color: red;
+        padding: 10rem 0;
+    }
+    
+    .job-header h2 {
+        color: var(--black);
+    }
     /* end job area */
+    
+    .reveal {
+        position: relative;
+        transform: translateY(150px);
+        opacity: 0;
+        transition: all 2s ease;
+    }
+    
+    .reveal.active {
+        transform: translateY(0px);
+        opacity: 100;
+    }
     /* start footer */
+    
+    .main-footer {
+        background-color: var(--company-color);
+    }
+    
+    .footer-flex {
+        display: flex;
+        margin: auto;
+        justify-content: space-between;
+        padding: var(--size-10);
+    }
     /* end footer */
+    /* Company page  */
+    
+    .about,
+    .team-area {
+        margin-top: var(--size-100);
+    }
+    
+    .about h2,
+    .team-area h2 {
+        font-size: var(--size-40);
+    }
+    
+    .about,
+    .motto {
+        text-align: center;
+        line-height: 2;
+        letter-spacing: .1rem;
+        /*maybe delete the letter spacing?*/
+    }
     /* ========================================== */
     
     @media (max-width: 700px) {

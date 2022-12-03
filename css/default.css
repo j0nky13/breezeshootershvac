@@ -44,3 +44,7 @@
 button {
     display: none;
 }
+
+footer {
+    margin-top: var(--size-30);
+}
