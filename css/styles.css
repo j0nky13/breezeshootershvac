@@ -40,7 +40,7 @@
     }
     
     .header-image {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 30%, transparent 20%), url(/assets/images/49379-39377820-l-scaled.jpeg);
+        background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 40%, transparent 30%), url(/assets/images/49379-39377820-l-scaled.jpeg);
         background-size: center;
         background-repeat: no-repeat;
         background-position: 50% 60%;
@@ -53,6 +53,13 @@
         justify-content: center;
     }
     /* end header/header image */
+    /* Phone number */
+    
+    .phone-number {
+        margin-top: 2rem;
+        text-align: center;
+        font-size: var(--size-40);
+    }
     /* ===== start CARDS ===== */
     
     .flip-cards {
@@ -301,18 +308,36 @@
     
     .jobs {
         margin: 2rem 0;
-        background-color: red;
+        /* background-color: red; */
         padding: 10rem 0;
     }
     
+    .job-body a {
+        display: flex;
+        justify-content: center;
+    }
+    
     .job-header h2 {
+        text-align: center;
         color: var(--black);
+    }
+    
+    .photos {
+        display: flex;
+        padding: 4rem 0;
+        justify-content: space-evenly;
+    }
+    
+    .photo {
+        width: 200px;
+        height: 200px;
+        background-color: var(--company-color);
     }
     /* end job area */
     
     .reveal {
         position: relative;
-        transform: translateY(150px);
+        transform: translateY(75px);
         opacity: 0;
         transition: all 2s ease;
     }
