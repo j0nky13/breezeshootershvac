@@ -261,6 +261,39 @@
         background-color: var(--company-color);
         max-width: 1600px;
     }
+    
+    .review-carousel {
+        margin: auto;
+        width: 50%;
+        overflow: hidden;
+    }
+    
+    .review {
+        width: 100%;
+        float: left;
+    }
+    
+    .dots {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+    }
+    
+    .dot.active {
+        background-color: #333;
+    }
     /* end reviews */
     /* ===== Product area ===== */
     

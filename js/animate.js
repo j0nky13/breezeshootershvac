@@ -19,3 +19,51 @@ function reveal() {
     }
 
 }
+
+// var currentIndex = 0;
+// var reviews = document.getElementsByClassName("review");
+
+// function showNextReview() {
+//     reviews[currentIndex].style.display = "none";
+//     currentIndex = (currentIndex + 1) % reviews.length;
+//     reviews[currentIndex].style.display = "block";
+// }
+
+// var dots = document.getElementsByClassName("dot");
+
+// function showNextReview() {
+//     reviews[currentIndex].style.display = "none";
+//     dots[currentIndex].classList.remove("active");
+//     currentIndex = (currentIndex + 1) % reviews.length;
+//     reviews[currentIndex].style.display = "block";
+//     dots[currentIndex].classList.add("active");
+// }
+
+
+// setInterval(showNextReview, 8000);
+
+// for (var i = 0; i < dots.length; i++) {
+//     dots[i].addEventListener("click", function() {
+//         currentIndex = i;
+//         showNextReview();
+//     });
+// }
+
+var currentIndex = 0;
+var reviews = document.getElementsByClassName("review");
+var dots = document.getElementsByClassName("dot");
+
+function showNextReview() {
+    reviews[currentIndex].style.display = "none";
+    dots[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % reviews.length;
+    reviews[currentIndex].style.display = "block";
+    dots[currentIndex].classList.add("active");
+}
+
+setInterval(showNextReview, 3000);
+
+var carousel = document.getElementsByClassName("review-carousel")[0];
+var hammer = new Hammer(carousel);
+hammer.on("swipeleft", showNextReview);
+hammer.on("swiperight", showPrevReview);
