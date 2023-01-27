@@ -15,7 +15,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gudea&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-<script src="/js/animate.js"></script>
+
 
 <body>
     <header class="main-header">
@@ -164,13 +164,13 @@
     </section>
 
     <section class="reviews">
-        <div class="reveal">
+        <div class="reveal-text">
             <div class=" review-content">
                 <div class="review-header">
                     <h2>Reviews</h2>
                     <p>Here is what our customers have to say!</p>
-                    <div class="review-carousel">
-                        <div class="review">
+                    <div class="review-carousel carousel-container">
+                        <div class="review carousel-review">
                             <p>Review 1</p>
                             <br>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit commodi molestiae autem aperiam. Cupiditate quod animi, alias quaerat voluptatibus deserunt!
@@ -178,7 +178,7 @@
                             <br>
                             <a href="">See More</a>
                         </div>
-                        <div class="review">
+                        <div class="review carousel-review">
                             <p>Review 2</p>
                             <br>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit commodi molestiae autem aperiam. Cupiditate quod animi, alias quaerat voluptatibus deserunt!
@@ -186,7 +186,7 @@
                             <br>
                             <a href="">See More</a>
                         </div>
-                        <div class="review">
+                        <div class="review carousel-review">
                             <p>Review 3</p>
                             <br>
                             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit commodi molestiae autem aperiam. Cupiditate quod animi, alias quaerat voluptatibus deserunt!
@@ -194,77 +194,100 @@
                             <br>
                             <a href="">See More</a>
                         </div>
-                        <ul class="dots">
+                        <div class="review carousel-review">
+                            <p>Review 4</p>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit commodi molestiae autem aperiam. Cupiditate quod animi, alias quaerat voluptatibus deserunt!
+                            </p>
+                            <br>
+                            <a href="">See More</a>
+                        </div>
+                        <div class="review carousel-review">
+                            <p>Review 5</p>
+                            <br>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit commodi molestiae autem aperiam. Cupiditate quod animi, alias quaerat voluptatibus deserunt!
+                            </p>
+                            <br>
+                            <a href="">See More</a>
+                        </div>
+                        <!-- <ul class="dots">
                             <li class="dot active"></li>
                             <li class="dot"></li>
                             <li class="dot"></li>
-                        </ul>
+                        </ul> -->
+                        <div class="carousel-dots">
+                            <span class="dot active " data-index="0"></span>
+                            <span class=" dot " data-index="1"></span>
+                            <span class=" dot " data-index="2"></span>
+                            <span class="dot " data-index="3"></span>
+                            <span class=" dot " data-index="4"></span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="products">
-        <div class="reveal">
-            <div class=" medium-container product-flex">
-                <div class="product-desc">
+    <section class="products ">
+        <div class="reveal-text">
+            <div class=" medium-container product-flex ">
+                <div class="product-desc ">
                     <h2>Products</h2>
                     <p>We use the best products in the industry</p>
-                    <a href="/pages/products.html" class="btn">See More</a>
+                    <a href="/pages/products.html " class="btn ">See More</a>
                 </div>
 
-                <div class="product-image">
-                    <img src="/assets/images/product logos.jpg" width="500px" alt="product image">
+                <div class="product-image ">
+                    <img src="/assets/images/product logos.jpg " width="500px " alt="product image ">
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="jobs">
+    <section class="jobs ">
 
-        <div class="reveal">
+        <div class="reveal-text">
             <div class="medium-container job-body ">
-                <div class="job-header">
+                <div class="job-header ">
                     <h2>Check out some of our work!</h2>
                 </div>
-                <div class=" medium-container photos">
-                    <div class="photo photo1">test</div>
-                    <div class="photo photo2">test</div>
-                    <div class="photo photo3">test</div>
+                <div class=" medium-container photos ">
+                    <div class="photo photo1 ">test</div>
+                    <div class="photo photo2 ">test</div>
+                    <div class="photo photo3 ">test</div>
                 </div>
-                <a href="/pages/reviews.html" class="btn">See More</a>
+                <a href="/pages/reviews.html " class="btn ">See More</a>
             </div>
         </div>
     </section>
 
-    <section class="subscribe">
+    <section class="subscribe ">
         <div>
             <h3>Enter email for updates!</h3>
         </div>
-        <div class="subscribe-bar">
+        <div class="subscribe-bar ">
 
-            <input type="email" placeholder="enter email">
-            <input type="submit">
+            <input type="email " placeholder="enter email ">
+            <input type="submit ">
         </div>
     </section>
 
-    <footer class="main-footer">
-        <!-- <div class="reveal"> -->
-        <div class="container footer-flex">
-            <div class="address">
+    <footer class="main-footer ">
+        <!-- <div class="reveal "> -->
+        <div class="container footer-flex ">
+            <div class="address ">
                 <h3>Address</h3>
                 <address>blackberry lane <br>
                         pomaria, sc 12345
                     </address>
                 <phone>843-132-1234</phone>
             </div>
-            <div class="hours">
+            <div class="hours ">
                 <h3>Hours</h3>
                 <p>Monday-Friday: 9am-5pm</p>
                 <p>Saturday & Sunday: Closed</p>
             </div>
-            <div class="business-info">
+            <div class="business-info ">
                 <p>BBB #</p>
                 <p>Licensed & Insured</p>
                 <p>License # 115393 </p>
@@ -275,8 +298,8 @@
 
 
 </body>
-
-<script src="/js/nav.js"></script>
-<!-- <script src="/js/animate.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js "></script>
+<script src="/js/nav.js "></script>
+<script src="/js/page-animations.js "></script>
 
 </html>
