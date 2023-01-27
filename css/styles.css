@@ -295,6 +295,10 @@
     .dot.active {
         background-color: #333;
     }
+    
+    .dots>li {
+        list-style-type: none;
+    }
     /* end reviews */
     /* ===== Product area ===== */
     

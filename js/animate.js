@@ -1,4 +1,52 @@
+var currentIndex = 0;
+var reviews = document.getElementsByClassName("review");
+var dots = document.getElementsByClassName("dot");
+
+function showNextReview() {
+    reviews[currentIndex].style.display = "none";
+
+    dots[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % reviews.length;
+    reviews[currentIndex].style.display = "block";
+    dots[currentIndex].classList.add("active");
+}
+
+setInterval(showNextReview, 3000);
+
+var carousel = document.getElementsByClassName("review-carousel")[0];
+var hammer = new Hammer(carousel);
+hammer.on("swipeleft", showNextReview);
+hammer.on("swiperight", showPrevReview);
+
+for (var i = 0; i < dots.length; i++) {
+    dots[i].addEventListener("click", function() {
+        currentIndex = i;
+        showNextReview();
+    });
+}
+
+// lazy load intersecion observer
+
+// Select the lazy-loaded section
+var lazyLoadedSection = document.querySelector('.lazy-loaded-section');
+
+// Create an IntersectionObserver
+var observer = new IntersectionObserver(function(entries) {
+    // Check if the lazy-loaded section is visible
+    if (entries[0].isIntersecting) {
+        // Execute the carousel code
+        // ...
+
+        // Stop observing the lazy-loaded section
+        observer.unobserve(lazyLoadedSection);
+    }
+});
+
+// Start observing the lazy-loaded section
+observer.observe(lazyLoadedSection);
+
 // reveal text section
+
 
 window.addEventListener('scroll', reveal);
 
@@ -19,7 +67,10 @@ function reveal() {
     }
 
 }
+// ---------------------------
 
+
+// ------------------------
 // var currentIndex = 0;
 // var reviews = document.getElementsByClassName("review");
 
@@ -48,22 +99,30 @@ function reveal() {
 //         showNextReview();
 //     });
 // }
+// -----------------------------
+// var currentIndex = 0;
+// var reviews = document.getElementsByClassName("review");
+// var dots = document.getElementsByClassName("dot");
 
-var currentIndex = 0;
-var reviews = document.getElementsByClassName("review");
-var dots = document.getElementsByClassName("dot");
+// function showNextReview() {
+//     reviews[currentIndex].style.display = "none";
 
-function showNextReview() {
-    reviews[currentIndex].style.display = "none";
-    dots[currentIndex].classList.remove("active");
-    currentIndex = (currentIndex + 1) % reviews.length;
-    reviews[currentIndex].style.display = "block";
-    dots[currentIndex].classList.add("active");
-}
+//     dots[currentIndex].classList.remove("active");
+//     currentIndex = (currentIndex + 1) % reviews.length;
+//     reviews[currentIndex].style.display = "block";
+//     dots[currentIndex].classList.add("active");
+// }
 
-setInterval(showNextReview, 3000);
+// setInterval(showNextReview, 3000);
 
-var carousel = document.getElementsByClassName("review-carousel")[0];
-var hammer = new Hammer(carousel);
-hammer.on("swipeleft", showNextReview);
-hammer.on("swiperight", showPrevReview);
+// var carousel = document.getElementsByClassName("review-carousel")[0];
+// var hammer = new Hammer(carousel);
+// hammer.on("swipeleft", showNextReview);
+// hammer.on("swiperight", showPrevReview);
+
+// for (var i = 0; i < dots.length; i++) {
+//     dots[i].addEventListener("click", function() {
+//         currentIndex = i;
+//         showNextReview();
+//     });
+// }
