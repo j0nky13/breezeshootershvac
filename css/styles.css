@@ -1,311 +1,387 @@
-    /* navigation area */
-    
-    .flex,
-    .nav-center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+/* navigation area */
+
+.flex,
+.nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.primary-navigation {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-navigation a {
+    text-decoration: none;
+    font-size: var(--size-20);
+    color: var(--black);
+}
+
+.primary-navigation a:hover {
+    color: var(--company-color);
+}
+
+.primary-navigation li {
+    padding: 1rem;
+}
+
+.pulse {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
     }
-    
-    .primary-navigation {
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    50% {
+        transform: scale(1.1);
     }
-    
-    .primary-navigation a {
-        text-decoration: none;
-        font-size: var(--size-20);
-        color: var(--black);
+    100% {
+        transform: scale(1);
     }
-    
-    .primary-navigation a:hover {
-        color: var(--company-color);
-    }
-    
-    .primary-navigation li {
-        padding: 1rem;
-    }
-    
-    #active {
-        color: var(--company-color);
-    }
-    /* end nav bar */
-    /* start header/header image */
-    
-    .header {
-        height: 600px;
-        max-width: 1600px;
-        margin: auto;
-    }
-    
-    .header-image {
-        background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 40%, transparent 30%), url(/assets/images/49379-39377820-l-scaled.jpeg);
-        background-size: center;
-        background-repeat: no-repeat;
-        background-position: 50% 60%;
-        position: relative;
-    }
-    
-    .company-logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    /* end header/header image */
-    /* Phone number */
-    
-    .phone-number {
-        margin-top: 2rem;
-        text-align: center;
-        font-size: var(--size-40);
-    }
-    /* ===== start CARDS ===== */
-    
-    .flip-cards {
-        padding-top: 5rem;
-    }
-    
-    .card-grid {
-        display: grid;
-        grid-template-areas: "1 2" "3 4" "5 .";
-        gap: 2rem;
-    }
-    
-    .card {
-        width: 600px;
-    }
-    
-    .card>.card5 {
-        width: 1233px;
-    }
-    
-    .card__content {
-        text-align: center;
-        position: relative;
-        padding: 7em 11em;
-        transition: transform 1s;
-        transform-style: preserve-3d;
-    }
-    
-    .card:hover .card__content {
-        transform: rotateY(.5turn);
-    }
-    
-    .card__front,
-    .card__back {
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 5em 3em;
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-        display: grid;
-        align-content: center;
-    }
-    
-    .front1 {
-        background-color: var(--clr);
-        background-image: url(/assets/images/Air-Conditioning-Gold-Coast-1.jpg);
-        background-size: cover;
-        background-blend-mode: overlay;
-        color: #333;
-    }
-    
-    .front2 {
-        background-color: var(--clr);
-        background-image: url(/assets/images/738903160-H-1024x700.webp);
-        background-size: cover;
-        background-blend-mode: overlay;
-        color: #333;
-    }
-    
-    .front3 {
-        background-color: var(--clr);
-        background-image: url(/assets/images/Air-Conditioning-Home-Owner-Guide.jpg);
-        background-size: cover;
-        background-blend-mode: overlay;
-        color: #333;
-    }
-    
-    .front4 {
-        background-color: var(--clr);
-        background-image: url(/assets/images/49379-39377820-l-scaled.jpeg);
-        background-size: cover;
-        background-blend-mode: overlay;
-        color: #333;
-    }
-    
-    .front5 {
-        background-color: var(--clr);
-        background-image: url(/assets/images/ac.jpg);
-        background-size: cover;
-        background-blend-mode: overlay;
-        color: #333;
-    }
-    
-    .card__front::before {
-        content: '';
-        position: absolute;
-        --spacer: 1em;
-        top: var(--spacer);
-        bottom: var(--spacer);
-        left: var(--spacer);
-        right: var(--spacer);
-        border: 3px solid currentColor;
-        transform: var(--level-one);
-    }
-    
-    .card__title {
-        font-size: 3.5rem;
-        transform: var(--level-three);
-        order: 2;
-        text-transform: uppercase;
-    }
-    
-    .card__subtitle {
-        transform: var(--level-two);
-        text-transform: uppercase;
-        letter-spacing: 4px;
-        font-size: .75rem;
-        font-weight: var(--fw-bold);
-        opacity: .7;
-    }
-    
-    .card__body {
-        transform: var(--level-two);
-        font-weight: var(fw-normal);
-        font-size: 1.5rem;
-        line-height: 1.6;
-        color: var(--white);
-    }
-    
-    .card__back {
-        transform: rotateY(.5turn);
-        color: var(--clr);
-        background: var(--company-color);
-    }
-    
-    .card1 {
-        /* display: grid; */
-        grid-area: 1;
-    }
-    
-    .card2 {
-        /* display: grid; */
-        grid-area: 2;
-    }
-    
-    .card3 {
-        /* display: grid; */
-        grid-area: 3;
-    }
-    
-    .card4 {
-        /* display: grid; */
-        grid-area: 4;
-    }
-    
-    .card5 {
-        /* display: grid; */
-        grid-area: 5;
-    }
-    
-    .card__btn {
-        margin: auto;
-        padding: 0 1rem;
-        max-width: 25rem;
-        align-self: center;
-        background-color: var(--white);
-        color: var(--black);
-        border-radius: 10px;
-        border: white solid;
-        font-size: var(--size-20);
-    }
-    
-    .card__btn,
-    a {
-        text-decoration: none;
-    }
-    /* .card_btn a:hover {
+}
+
+.active-pulse>a {
+    color: white;
+    background-color: rgb(8, 206, 8);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+#active {
+    color: var(--company-color);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(241, 241, 241, .7);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 0 10px 10px 10px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    /* background-color: #ddd; */
+    background-color: rgba(241, 241, 241, .2);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* end nav bar */
+
+
+/* start header/header image */
+
+.header {
+    height: 600px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+.header-image {
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, .25) 40%, transparent 30%), url(/assets/images/49379-39377820-l-scaled.jpeg);
+    background-size: center;
+    background-repeat: no-repeat;
+    background-position: 50% 60%;
+    position: relative;
+}
+
+.company-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* end header/header image */
+
+
+/* Phone number */
+
+.phone-number {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: var(--size-40);
+}
+
+
+/* ===== start CARDS ===== */
+
+.flip-cards {
+    padding-top: 5rem;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-areas: "1 2" "3 4" "5 .";
+    gap: 2rem;
+}
+
+.card {
+    width: 600px;
+}
+
+.card>.card5 {
+    width: 1233px;
+}
+
+.card__content {
+    text-align: center;
+    position: relative;
+    padding: 7em 11em;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card__content {
+    transform: rotateY(.5turn);
+}
+
+.card__front,
+.card__back {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5em 3em;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    display: grid;
+    align-content: center;
+}
+
+.front1 {
+    background-color: var(--clr);
+    background-image: url(/assets/images/Air-Conditioning-Gold-Coast-1.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+}
+
+.front2 {
+    background-color: var(--clr);
+    background-image: url(/assets/images/738903160-H-1024x700.webp);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+}
+
+.front3 {
+    background-color: var(--clr);
+    background-image: url(/assets/images/Air-Conditioning-Home-Owner-Guide.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+}
+
+.front4 {
+    background-color: var(--clr);
+    background-image: url(/assets/images/49379-39377820-l-scaled.jpeg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+}
+
+.front5 {
+    background-color: var(--clr);
+    background-image: url(/assets/images/ac.jpg);
+    background-size: cover;
+    background-blend-mode: overlay;
+    color: #333;
+}
+
+.card__front::before {
+    content: '';
+    position: absolute;
+    --spacer: 1em;
+    top: var(--spacer);
+    bottom: var(--spacer);
+    left: var(--spacer);
+    right: var(--spacer);
+    border: 3px solid currentColor;
+    transform: var(--level-one);
+}
+
+.card__title {
+    font-size: 3.5rem;
+    transform: var(--level-three);
+    order: 2;
+    text-transform: uppercase;
+}
+
+.card__subtitle {
+    transform: var(--level-two);
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: .75rem;
+    font-weight: var(--fw-bold);
+    opacity: .7;
+}
+
+.card__body {
+    transform: var(--level-two);
+    font-weight: var(fw-normal);
+    font-size: 1.5rem;
+    line-height: 1.6;
+    color: var(--white);
+}
+
+.card__back {
+    transform: rotateY(.5turn);
+    color: var(--clr);
+    background: var(--company-color);
+}
+
+.card1 {
+    /* display: grid; */
+    grid-area: 1;
+}
+
+.card2 {
+    /* display: grid; */
+    grid-area: 2;
+}
+
+.card3 {
+    /* display: grid; */
+    grid-area: 3;
+}
+
+.card4 {
+    /* display: grid; */
+    grid-area: 4;
+}
+
+.card5 {
+    /* display: grid; */
+    grid-area: 5;
+}
+
+.card__btn {
+    margin: auto;
+    padding: 0 1rem;
+    max-width: 25rem;
+    align-self: center;
+    background-color: var(--white);
+    color: var(--black);
+    border-radius: 10px;
+    border: white solid;
+    font-size: var(--size-20);
+}
+
+.card__btn,
+a {
+    text-decoration: none;
+}
+
+
+/* .card_btn a:hover {
         border: 1px var(--white) solid;
         background-color: var(--company-color);
         color: var(--white);
     } */
-    /* end cards */
-    /* ===== REVIEWS AREA ===== */
-    
-    .carousel-container {
-        overflow: hidden;
-    }
-    
-    .carousel-review {
-        margin: auto;
-        width: 50%;
-        display: none;
-    }
-    
-    .carousel-review.active {
-        display: block;
-    }
-    
-    .carousel-dots {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: gray;
-        margin-right: 5px;
-    }
-    
-    .dot.active {
-        background-color: black;
-    }
-    
-    .reviews {
-        margin-top: 10rem;
-    }
-    
-    .review-header {
-        text-align: center;
-        padding: 2rem 0;
-        color: var(--white);
-    }
-    
-    .review-header h2 {
-        font-size: var(--size-30);
-    }
-    
-    .review-header p {
-        font-size: var(--size-20);
-    }
-    
-    .review-content {
-        height: 30rem;
-        margin-top: 10rem;
-        background-color: var(--company-color);
-        max-width: 1600px;
-    }
-    /* .reveal-text {
+
+
+/* end cards */
+
+
+/* ===== REVIEWS AREA ===== */
+
+.carousel-container {
+    overflow: hidden;
+}
+
+.carousel-review {
+    margin: auto;
+    width: 50%;
+    display: none;
+}
+
+.carousel-review.active {
+    display: block;
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: lightgray;
+    margin-right: 5px;
+}
+
+.dot.active {
+    background-color: white;
+}
+
+.reviews {
+    margin-top: 10rem;
+}
+
+.review-header {
+    text-align: center;
+    padding: 2rem 0;
+    color: var(--white);
+}
+
+.review-header h2 {
+    font-size: var(--size-30);
+}
+
+.review-header p {
+    font-size: var(--size-20);
+}
+
+.review-content {
+    height: 30rem;
+    margin-top: 10rem;
+    background-color: var(--company-color);
+    max-width: 1600px;
+}
+
+
+/* .reveal-text {
         transform: translateY(100%);
         transition: transform 0.5s ease-in;
     }
      */
-    
-    .review {
-        background-color: rgba(255, 255, 255, .40);
-        border-radius: 30px 0px;
-        padding: 2rem 0;
-        margin: 2rem auto;
-    }
-    /* figure out how to make this transition without being partially on screen */
-    /* @keyframes slide {
+
+.review {
+    background-color: rgba(255, 255, 255, .40);
+    border-radius: 30px 0px;
+    padding: 2rem 0;
+    margin: 2rem auto;
+}
+
+
+/* figure out how to make this transition without being partially on screen */
+
+
+/* @keyframes slide {
         from {
             transform: translateX(0);
         }
@@ -327,14 +403,18 @@
         }
     }
      */
-    
-    .review.in {
-        animation: slideIn 0.8s forwards;
-    }
-    /* .ease-in {
+
+.review.in {
+    animation: slideIn 0.8s forwards;
+}
+
+
+/* .ease-in {
         transform: translateY(0);
     } */
-    /* .review-carousel {
+
+
+/* .review-carousel {
         margin: auto;
         width: 50%;
         overflow: hidden;
@@ -371,163 +451,183 @@
     .dots>li {
         list-style-type: none;
     } */
-    /* end reviews */
-    /* ===== Product area ===== */
-    
-    .products {
-        margin: 10rem 0;
-        line-height: 2;
-    }
-    
-    .product-flex {
-        display: flex;
-        align-items: center;
-    }
-    
-    .product-desc h2 {
-        font-size: var(--size-30);
-    }
-    
-    .product-desc {
-        font-size: var(--size-20);
-    }
-    
-    .product-desc>a {
-        border: 1px solid black;
-        border-radius: 10px;
-        max-width: fit-content;
-        margin: 1rem auto;
-        padding: 0 2rem;
-        display: flex;
-        justify-content: center;
-        color: var(--black);
-    }
-    
-    .product-desc>a:hover {
-        background-color: var(--company-color);
-        color: var(--white);
-        border: 1px solid white;
-        border-radius: 10px;
-    }
-    
-    .product-image {
-        margin-left: auto;
-    }
-    /*  end product area */
-    /* start job area */
-    
-    .jobs {
-        margin: 2rem 0;
-        /* background-color: red; */
-        padding: 10rem 0;
-    }
-    
-    .job-body a {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .job-header h2 {
-        text-align: center;
-        color: var(--black);
-    }
-    
-    .photos {
-        display: flex;
-        padding: 4rem 0;
-        justify-content: space-evenly;
-    }
-    
-    .photo {
-        width: 200px;
-        height: 200px;
-        background-color: var(--company-color);
-    }
-    /* end job area */
-    /* start footer */
-    
-    .main-footer {
-        background-color: var(--company-color);
-    }
-    
-    .footer-flex {
-        display: flex;
-        margin: auto;
-        justify-content: space-between;
-        padding: var(--size-10);
-    }
-    /* end footer */
-    /* Company page  */
-    
-    .about,
-    .team-area {
-        margin-top: var(--size-100);
-    }
-    
-    .about h2,
-    .team-area h2 {
-        font-size: var(--size-40);
-    }
-    
-    .about,
-    .motto {
-        text-align: center;
-        line-height: 2;
-        letter-spacing: .1rem;
-        /*maybe delete the letter spacing?*/
-    }
-    /* .text-to-show {
+
+
+/* end reviews */
+
+
+/* ===== Product area ===== */
+
+.products {
+    margin: 10rem 0;
+    line-height: 2;
+}
+
+.product-flex {
+    display: flex;
+    align-items: center;
+}
+
+.product-desc h2 {
+    font-size: var(--size-30);
+}
+
+.product-desc {
+    font-size: var(--size-20);
+}
+
+.product-desc>a {
+    border: 1px solid black;
+    border-radius: 10px;
+    max-width: fit-content;
+    margin: 1rem auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: center;
+    color: var(--black);
+}
+
+.product-desc>a:hover {
+    background-color: var(--company-color);
+    color: var(--white);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.product-image {
+    margin-left: auto;
+}
+
+
+/*  end product area */
+
+
+/* start job area */
+
+.jobs {
+    margin: 2rem 0;
+    /* background-color: red; */
+    padding: 10rem 0;
+}
+
+.job-body a {
+    display: flex;
+    justify-content: center;
+}
+
+.job-header h2 {
+    text-align: center;
+    color: var(--black);
+}
+
+.photos {
+    display: flex;
+    padding: 4rem 0;
+    justify-content: space-evenly;
+}
+
+.photo {
+    width: 200px;
+    height: 200px;
+    background-color: var(--company-color);
+}
+
+
+/* end job area */
+
+
+/* start footer */
+
+.main-footer {
+    background-color: var(--company-color);
+}
+
+.footer-flex {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: var(--size-10);
+}
+
+
+/* end footer */
+
+
+/* Company page  */
+
+.about,
+.team-area {
+    margin-top: var(--size-100);
+}
+
+.about h2,
+.team-area h2 {
+    font-size: var(--size-40);
+}
+
+.about,
+.motto {
+    text-align: center;
+    line-height: 2;
+    letter-spacing: .1rem;
+    /*maybe delete the letter spacing?*/
+}
+
+
+/* .text-to-show {
         opacity: 0;
         transition: opacity 1s ease-in-out;
     } */
-    /* ========================================== */
-    
-    @media (max-width: 700px) {
-        .primary-navigation {
-            position: fixed;
-            z-index: 1000;
-            inset: 0 0 0 30%;
-            flex-direction: column;
-            padding: min(10vh, 10rem) 2em;
-            background: var(--company-color);
-            transform: translateX(100%);
-            transition: transform 350ms ease-out;
-        }
-        /* primary nav on other pages */
-        /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
+
+
+/* ========================================== */
+
+@media (max-width: 700px) {
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(10vh, 10rem) 2em;
+        background: var(--company-color);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    /* primary nav on other pages */
+    /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
             height: 150px;
             background-color:black; */
-        /* ===== */
-        .primary-navigation li {
-            padding: 2rem;
-        }
-        .primary-navigation[data-visible="true"] {
-            transform: translateX(0%);
-        }
-        .mobile-nav-toggle {
-            display: block;
-            position: absolute;
-            z-index: 9999;
-            background-color: transparent;
-            background-image: url(/assets/icons/icon-hamburger.svg);
-            background-repeat: no-repeat;
-            border: 0;
-            width: 2rem;
-            aspect-ratio: 1;
-            top: 2rem;
-            right: 2rem;
-        }
-        .mobile-nav-toggle[aria-expanded="true"] {
-            background-image: url(/assets/icons/icon-close.svg);
-        }
-        /* .logo {
+    /* ===== */
+    .primary-navigation li {
+        padding: 2rem;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url(/assets/icons/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(/assets/icons/icon-close.svg);
+    }
+    /* .logo {
         display: none;
         margin: auto;
     }
     .mobile-logo {
         display: block;
     } */
-        #active {
-            color: var(--white);
-        }
+    #active {
+        color: var(--white);
     }
+}

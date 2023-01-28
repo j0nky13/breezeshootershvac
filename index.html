@@ -25,31 +25,46 @@
                 <button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
                         <span class="sr-only"> </span>
                     </button>
-
+                <!-- ==============Keep below grayed out========================= -->
                 <!-- 
             <div class="mobile-logo">
                 <a href="/index.html" class="mobile-logo"><img src="/assets/logos/Untitled-7.png" width="150px" alt="mobile logo"></a>
             </div>  -->
-
+                <!-- ===========reuse this code below if the new menubar doesn't work ============================= -->
                 <nav>
                     <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
                         <li class="active">
                             <a href="/index.html" id="active">Home</a>
                         </li>
-                        <li>
-                            <a href="/pages/company.html">About</a>
+                        <li class="dropdown">
+                            <a href="#">Company</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Team</a></li>
+                                <li><a href="#">Careers</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a href="/pages/services.html">Services</a>
+                        <li class="dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Residential</a></li>
+                                <li><a href="#">Commercial</a></li>
+                                <li><a href="#">Products</a></li>
+                            </ul>
                         </li>
+
                         <li>
                             <a href="/pages/membership.html">Membership</a>
                         </li>
                         <li>
                             <a href="/pages/contact.html">Contact</a>
                         </li>
+                        <li class="pulse active-pulse">
+                            <a href="/pages/contact.html">Join Our Team</a>
+                        </li>
                     </ul>
                 </nav>
+
             </div>
 
             <div class="company-logo">
