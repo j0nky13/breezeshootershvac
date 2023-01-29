@@ -27,7 +27,8 @@
     padding: 1rem;
 }
 
-.pulse {
+
+/* .pulse {
     animation: pulse 1s ease-in-out infinite;
 }
 
@@ -48,7 +49,7 @@
     background-color: rgb(8, 206, 8);
     border-radius: 10px;
     padding: 10px;
-}
+} */
 
 #active {
     color: var(--company-color);
@@ -66,6 +67,7 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     border-radius: 0 10px 10px 10px;
     z-index: 1;
+    list-style-type: none;
 }
 
 .dropdown-content a {
@@ -358,6 +360,7 @@ a {
 
 .review-content {
     height: 30rem;
+    margin: auto;
     margin-top: 10rem;
     background-color: var(--company-color);
     max-width: 1600px;
@@ -469,6 +472,7 @@ a {
 }
 
 .product-desc h2 {
+    text-align: center;
     font-size: var(--size-30);
 }
 

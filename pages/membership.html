@@ -18,46 +18,91 @@
 
 <body>
     <header class="main-header">
-        <div class="container nav-center">
+        <div class="header  header-image">
+            <div class="container nav-center">
 
-            <button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
-                    <span class="sr-only"> </span>
-                </button>
+                <button aria-controls="primary-navigation" aria-expanded="false" class="mobile-nav-toggle">
+                        <span class="sr-only"> </span>
+                    </button>
+                <!-- ==============Keep below grayed out========================= -->
+                <!-- 
+            <div class="mobile-logo">
+                <a href="/index.html" class="mobile-logo"><img src="/assets/logos/Untitled-7.png" width="150px" alt="mobile logo"></a>
+            </div>  -->
+                <!-- ===========reuse this code below if the new menubar doesn't work ============================= -->
+                <nav>
+                    <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
+                        <li class="active">
+                            <a href="/index.html" id="active">Home</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Company</a>
+                            <ul class="dropdown-content">
+                                <li><a href="/pages/company.html">About</a></li>
+                                <li><a href="/pages/team.html">Team</a></li>
+                                <li><a href="/pages/reviews.html">Reviews</a></li>
+                                <li><a href="/pages/careers.html">Careers</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown-content">
+                                <li><a href="#">Residential</a></li>
+                                <li><a href="#">Commercial</a></li>
+                                <li><a href="#">Products</a></li>
+                            </ul>
+                        </li>
 
-            <!-- 
-        <div class="mobile-logo">
-            <a href="/index.html" class="mobile-logo"><img src="/assets/logos/Untitled-7.png" width="150px" alt="mobile logo"></a>
-        </div>  -->
+                        <li>
+                            <a href="/pages/membership.html">Membership</a>
+                        </li>
+                        <li>
+                            <a href="/pages/contact.html">Contact</a>
+                        </li>
+                        <!-- <li class="pulse active-pulse">
+                            <a href="/pages/contact.html">Join Our Team</a>
+                        </li> -->
+                    </ul>
+                </nav>
 
-            <nav>
-                <ul id="primary-navigation" class="primary-navigation flex" data-visible="false">
-                    <li>
-                        <a href="/index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="/pages/company.html">About</a>
-                    </li>
-                    <li>
-                        <a href="/pages/services.html">Services</a>
-                    </li>
-                    <li class="active">
-                        <a href="/pages/membership.html" id="active">Membership</a>
-                    </li>
-                    <li>
-                        <a href="/pages/contact.html">Contact</a>
-                    </li>
-                </ul>
-            </nav>
+            </div>
+
+            <div class="company-logo">
+                <img src="/assets/images/breeze shooters logo ver1.svg" alt="company logo" width="500px" class="header-logo">
+            </div>
+            <div class="phone-number">
+                <phone>803-271-9895</phone>
+            </div>
         </div>
-
-        <div class="company-logo">
-            <img src="/assets/images/breeze shooters logo ver1.svg" alt="company logo" width="500px" class="header-logo">
-        </div>
-
     </header>
 
 
 
+
+
+    <footer class="main-footer ">
+        <!-- <div class="reveal "> -->
+        <div class="container footer-flex ">
+            <div class="address ">
+                <h3>Address</h3>
+                <address>blackberry lane <br>
+                        pomaria, sc 12345
+                    </address>
+                <phone>843-132-1234</phone>
+            </div>
+            <div class="hours ">
+                <h3>Hours</h3>
+                <p>Monday-Friday: 9am-5pm</p>
+                <p>Saturday & Sunday: Closed</p>
+            </div>
+            <div class="business-info ">
+                <p>BBB #</p>
+                <p>Licensed & Insured</p>
+                <p>License # 115393 </p>
+            </div>
+        </div>
+        <!-- </div> -->
+    </footer>
 </body>
 
 <script src="/js/nav.js"></script>
