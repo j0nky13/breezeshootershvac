@@ -130,12 +130,23 @@
 
 .flip-cards {
     padding-top: 5rem;
+    /* margin: auto; */
 }
 
 .card-grid {
+    /* display: grid;
+    grid-template-areas: "1 2" "3 4" "5 5";*/
+    /* gap: 1rem; */
     display: grid;
-    grid-template-areas: "1 2" "3 4" "5 .";
-    gap: 2rem;
+    /* grid-template-columns: repeat(2, 600px); */
+    /* 2 columns of 300px each */
+    /* grid-template-rows: repeat(3, 200px); */
+    /* 3 rows of 200px each */
+    grid-template-areas: "item1 item2" "item3 item4" "item5 5";
+    /* 5th item spans across both columns */
+    gap: 1rem;
+    /* margin: auto; */
+    justify-content: center;
 }
 
 .card {
@@ -143,7 +154,7 @@
 }
 
 .card>.card5 {
-    width: 1233px;
+    width: 1216px;
 }
 
 .card__content {
@@ -256,27 +267,27 @@
 
 .card1 {
     /* display: grid; */
-    grid-area: 1;
+    grid-area: item1;
 }
 
 .card2 {
     /* display: grid; */
-    grid-area: 2;
+    grid-area: item2;
 }
 
 .card3 {
     /* display: grid; */
-    grid-area: 3;
+    grid-area: item3;
 }
 
 .card4 {
     /* display: grid; */
-    grid-area: 4;
+    grid-area: item4;
 }
 
 .card5 {
     /* display: grid; */
-    grid-area: 5;
+    grid-area: item5;
 }
 
 .card__btn {
@@ -334,9 +345,11 @@ a {
     border-radius: 50%;
     background-color: lightgray;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .dot.active {
+    cursor: pointer;
     background-color: white;
 }
 
@@ -376,7 +389,7 @@ a {
 .review {
     background-color: rgba(255, 255, 255, .40);
     border-radius: 30px 0px;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
     margin: 2rem auto;
 }
 
@@ -472,7 +485,7 @@ a {
 }
 
 .product-desc h2 {
-    text-align: center;
+    /* text-align: center; */
     font-size: var(--size-30);
 }
 
@@ -585,53 +598,3 @@ a {
 
 
 /* ========================================== */
-
-@media (max-width: 700px) {
-    .primary-navigation {
-        position: fixed;
-        z-index: 1000;
-        inset: 0 0 0 30%;
-        flex-direction: column;
-        padding: min(10vh, 10rem) 2em;
-        background: var(--company-color);
-        transform: translateX(100%);
-        transition: transform 350ms ease-out;
-    }
-    /* primary nav on other pages */
-    /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
-            height: 150px;
-            background-color:black; */
-    /* ===== */
-    .primary-navigation li {
-        padding: 2rem;
-    }
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0%);
-    }
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 9999;
-        background-color: transparent;
-        background-image: url(/assets/icons/icon-hamburger.svg);
-        background-repeat: no-repeat;
-        border: 0;
-        width: 2rem;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
-    }
-    .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url(/assets/icons/icon-close.svg);
-    }
-    /* .logo {
-        display: none;
-        margin: auto;
-    }
-    .mobile-logo {
-        display: block;
-    } */
-    #active {
-        color: var(--white);
-    }
-}

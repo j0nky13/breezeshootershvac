@@ -18,3 +18,64 @@
     align-content: center;
     align-items: center;
 }
+
+.container-cards {
+    margin: auto;
+    align-items: center;
+    align-content: center;
+}
+
+
+/* ======== responsive */
+
+@media (max-width: 12) {}
+
+@media (max-width: 700px) {
+    .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0 0 0 30%;
+        flex-direction: column;
+        padding: min(10vh, 10rem) 2em;
+        background: var(--company-color);
+        transform: translateX(100%);
+        transition: transform 350ms ease-out;
+    }
+    /* primary nav on other pages */
+    /* background: linear-gradient(180deg, #000000 58.5%, #F1DDc5 85.83%, #F1DDC5 30%);
+            height: 150px;
+            background-color:black; */
+    /* ===== */
+    .primary-navigation li {
+        padding: 2rem;
+    }
+    .primary-navigation[data-visible="true"] {
+        transform: translateX(0%);
+    }
+    .mobile-nav-toggle {
+        display: block;
+        position: absolute;
+        z-index: 9999;
+        background-color: transparent;
+        background-image: url(/assets/icons/icon-hamburger.svg);
+        background-repeat: no-repeat;
+        border: 0;
+        width: 2rem;
+        aspect-ratio: 1;
+        top: 2rem;
+        right: 2rem;
+    }
+    .mobile-nav-toggle[aria-expanded="true"] {
+        background-image: url(/assets/icons/icon-close.svg);
+    }
+    /* .logo {
+        display: none;
+        margin: auto;
+    }
+    .mobile-logo {
+        display: block;
+    } */
+    #active {
+        color: var(--white);
+    }
+}
