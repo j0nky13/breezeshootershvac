@@ -485,7 +485,7 @@ a {
 }
 
 .product-desc h2 {
-    /* text-align: center; */
+    text-align: center;
     font-size: var(--size-30);
 }
 
@@ -522,7 +522,7 @@ a {
 /* start job area */
 
 .jobs {
-    margin: 2rem 0;
+    margin: 2rem auto;
     /* background-color: red; */
     padding: 10rem 0;
 }
@@ -537,7 +537,8 @@ a {
     color: var(--black);
 }
 
-.photos {
+
+/* .photos {
     display: flex;
     padding: 4rem 0;
     justify-content: space-evenly;
@@ -547,6 +548,49 @@ a {
     width: 200px;
     height: 200px;
     background-color: var(--company-color);
+}
+
+.photo1 {
+    background-image: url(/assets/images/IMG_8820.JPG);
+    background-size: contain;
+}
+
+.photo2 {
+    background-image: url(/assets/images/IMG_8822.JPG);
+    background-size: contain;
+}
+
+.photo3 {
+    background-image: url(/assets/images/IMG_8817.JPG);
+    background-size: contain;
+} */
+
+#carousel {
+    display: flex;
+    overflow-x: scroll;
+}
+
+#carousel img {
+    width: 300px;
+    height: 200px;
+    margin-right: 16px;
+}
+
+#enlarged-photo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#enlarged-photo img {
+    max-width: 80%;
+    max-height: 80%;
 }
 
 
