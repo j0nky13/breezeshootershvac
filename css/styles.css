@@ -125,27 +125,33 @@
     font-size: var(--size-40);
 }
 
+.phone-number a {
+    color: var(--black);
+}
+
+.title-motto {
+    margin: auto;
+    margin-top: 10rem;
+    max-width: 1200px;
+}
+
 
 /* ===== start CARDS ===== */
 
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
 .flip-cards {
     padding-top: 5rem;
-    /* margin: auto; */
+    ß
 }
 
 .card-grid {
-    /* display: grid;
-    grid-template-areas: "1 2" "3 4" "5 5";*/
-    /* gap: 1rem; */
     display: grid;
-    /* grid-template-columns: repeat(2, 600px); */
-    /* 2 columns of 300px each */
-    /* grid-template-rows: repeat(3, 200px); */
-    /* 3 rows of 200px each */
     grid-template-areas: "item1 item2" "item3 item4" "item5 5";
-    /* 5th item spans across both columns */
     gap: 1rem;
-    /* margin: auto; */
     justify-content: center;
 }
 
@@ -393,80 +399,9 @@ a {
     margin: 2rem auto;
 }
 
-
-/* figure out how to make this transition without being partially on screen */
-
-
-/* @keyframes slide {
-        from {
-            transform: translateX(0);
-        }
-        to {
-            transform: translateX(-0%);
-        }
-    }
-    
-    .review.out {
-        animation: slide 0.8s forwards;
-    }
-    
-    @keyframes slideIn {
-        from {
-            transform: translateX(150%);
-        }
-        to {
-            transform: translateX(0);
-        }
-    }
-     */
-
 .review.in {
     animation: slideIn 0.8s forwards;
 }
-
-
-/* .ease-in {
-        transform: translateY(0);
-    } */
-
-
-/* .review-carousel {
-        margin: auto;
-        width: 50%;
-        overflow: hidden;
-    }
-    
-    .review {
-        width: 100%;
-        float: left;
-        margin: 2rem 0;
-    }
-    
-    .dots {
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        right: 0;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-    }
-    
-    .dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        background-color: #ccc;
-        margin: 0 5px;
-    }
-    
-    .dot.active {
-        background-color: #333;
-    }
-    
-    .dots>li {
-        list-style-type: none;
-    } */
 
 
 /* end reviews */
@@ -530,6 +465,7 @@ a {
 .job-body a {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
 }
 
 .job-header h2 {
@@ -537,53 +473,39 @@ a {
     color: var(--black);
 }
 
-
-/* .photos {
-    display: flex;
-    padding: 4rem 0;
-    justify-content: space-evenly;
+.job-header p {
+    text-align: center;
+    color: var(--black);
+    margin-bottom: 3rem;
 }
-
-.photo {
-    width: 200px;
-    height: 200px;
-    background-color: var(--company-color);
-}
-
-.photo1 {
-    background-image: url(/assets/images/IMG_8820.JPG);
-    background-size: contain;
-}
-
-.photo2 {
-    background-image: url(/assets/images/IMG_8822.JPG);
-    background-size: contain;
-}
-
-.photo3 {
-    background-image: url(/assets/images/IMG_8817.JPG);
-    background-size: contain;
-} */
 
 #carousel {
-    display: flex;
-    overflow-x: scroll;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    cursor: pointer;
 }
 
-#carousel img {
-    width: 300px;
-    height: 200px;
-    margin-right: 16px;
+.image-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: all 0.3s ease;
 }
 
 #enlarged-photo {
+    display: none;
     position: fixed;
     top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
+    z-index: 1;
     justify-content: center;
     align-items: center;
 }
@@ -593,8 +515,102 @@ a {
     max-height: 80%;
 }
 
+@media screen and (max-width: 800px) {
+    #carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #carousel {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
 
 /* end job area */
+
+
+/* Subscribe section */
+
+
+/* .subscribe-container {
+    margin: auto;
+    display: flex;
+  
+align-items: center;
+justify-content: center;
+
+}
+.subscribe-container h3 {
+    margin: 1rem;
+} */
+
+
+/* end subscribe section */
+
+
+/* start bios */
+
+.team {
+    margin: 10rem;
+}
+
+.team img {
+    border-radius: 50%;
+}
+
+.bio-header {
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.bio-header h2 {
+    margin: 1rem;
+    font-size: var(--size-40);
+}
+
+.bio-header p {
+    margin-bottom: 5rem;
+}
+
+.bio {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.bio p {
+    margin: auto;
+    text-align: center;
+    max-width: 500px;
+}
+
+.bio .emp-title {
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin: 5rem auto;
+    max-width: 100px;
+}
+
+.kelsey-bio {
+    margin-bottom: 20rem;
+}
+
+
+/* end biis */
+
+
+/* Reviews page */
+
+.review-page-header {
+    margin: 5rem;
+}
+
+.review-page-header h2 {
+    font-size: var(--size-40);
+}
 
 
 /* start footer */
