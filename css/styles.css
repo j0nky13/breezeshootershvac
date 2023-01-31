@@ -304,13 +304,20 @@
     background-color: var(--white);
     color: var(--black);
     border-radius: 10px;
-    border: white solid;
+    border: 1px white solid;
     font-size: var(--size-20);
 }
 
 .card__btn,
 a {
+    margin-top: 1.5rem;
     text-decoration: none;
+}
+
+.card__btn:hover {
+    background-color: var(--company-color);
+    border: 1px white solid;
+    color: white;
 }
 
 
@@ -625,12 +632,8 @@ hr {
 
 /* Careers page */
 
-.jobs {
-    text-align: center;
-    margin: auto;
-}
-
 .jobs-desc h2 {
+    text-align: center;
     margin-bottom: 2rem;
     font-size: var(--size-40);
 }
@@ -758,6 +761,28 @@ hr {
     letter-spacing: .1rem;
     /*maybe delete the letter spacing?*/
 }
+
+
+/* Membership page */
+
+.maintenance-section {
+    margin: 7rem auto;
+}
+
+.maintenance-header h2 {
+    font-size: var(--size-40);
+    margin: auto;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.maintenance-header p {
+    margin: 2rem auto;
+    max-width: 600px;
+}
+
+
+/* end membership page */
 
 
 /* .text-to-show {
