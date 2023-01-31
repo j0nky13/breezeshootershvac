@@ -553,7 +553,7 @@ justify-content: center;
 /* start bios */
 
 .team {
-    margin: 10rem;
+    margin: 7rem;
 }
 
 .team img {
@@ -623,21 +623,120 @@ hr {
 }
 
 
-/* start footer */
+/* Careers page */
 
-.main-footer {
-    background-color: var(--company-color);
-}
-
-.footer-flex {
-    display: flex;
+.jobs {
+    text-align: center;
     margin: auto;
-    justify-content: space-between;
-    padding: var(--size-10);
+}
+
+.jobs-desc h2 {
+    margin-bottom: 2rem;
+    font-size: var(--size-40);
+}
+
+.jobs-desc p {
+    margin: auto;
+    max-width: 600px;
+    text-align: center;
+}
+
+.openings {
+    text-align: center;
+}
+
+.openings h2 {
+    margin-bottom: 2rem;
+    font-size: var(--size-40);
+}
+
+.openings p {
+    margin: auto;
+    max-width: 600px;
 }
 
 
-/* end footer */
+/* end job openings */
+
+
+/* start services */
+
+.service-intro {
+    margin: 2rem auto;
+}
+
+.service-intro h2 {
+    text-align: center;
+    margin: 7rem auto 2rem auto;
+    font-size: var(--size-40);
+}
+
+.service-list {
+    margin-bottom: 15rem;
+}
+
+.service-list h2 {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.service-intro p,
+.service-list p {
+    margin: auto;
+    max-width: 600px;
+}
+
+
+/* end services */
+
+
+/* Products page */
+
+.product-header {
+    margin: auto;
+    margin-top: 7rem;
+    margin-bottom: 2rem;
+}
+
+.product-header h2 {
+    text-align: center;
+    font-size: var(--size-40);
+    margin: 2rem;
+}
+
+.product-header p {
+    margin: auto;
+    max-width: 600px;
+}
+
+
+/* .products-grid {
+    display: grid;
+} */
+
+.products-flex h3 {
+    text-align: center;
+    font-size: var(--size-30);
+}
+
+.products-flex p {
+    max-width: 400px;
+}
+
+.flex-product {
+    display: flex;
+    margin: 4rem auto;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+}
+
+.flex-product img {
+    width: 400px;
+}
+
+
+/* end products page */
 
 
 /* Company page  */
@@ -668,3 +767,20 @@ hr {
 
 
 /* ========================================== */
+
+
+/* start footer */
+
+.main-footer {
+    background-color: var(--company-color);
+}
+
+.footer-flex {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: var(--size-10);
+}
+
+
+/* end footer */
