@@ -430,7 +430,7 @@ a {
 
 .products {
     margin: 10rem 0;
-    line-height: 2;
+    line-height: 1.5;
 }
 
 .product-flex {
@@ -441,6 +441,7 @@ a {
 .product-desc h2 {
     text-align: center;
     font-size: var(--size-30);
+    margin: 1.5rem auto;
 }
 
 .product-desc {
@@ -451,7 +452,7 @@ a {
     border: 1px solid black;
     border-radius: 10px;
     max-width: fit-content;
-    margin: 1rem auto;
+    margin: 2rem auto;
     padding: 0 2rem;
     display: flex;
     justify-content: center;
@@ -766,6 +767,10 @@ hr {
     width: 400px;
 }
 
+.extra-services {
+    text-align: center;
+}
+
 
 /* end products page */
 
@@ -831,9 +836,55 @@ hr {
     list-style-type: none;
 }
 
+.bullet-items li {
+    line-height: 2;
+}
+
 .bullet-items li::before {
     content: "\2713";
     margin-right: 10px;
+}
+
+
+/* .maint-schedule {
+    margin-top: 2rem;
+}
+
+.maint-schedule>h4 {
+    text-align: center;
+}
+
+.schedule {
+    display: flex;
+    margin-top: 2rem;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+}
+
+.schedule h4 {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.schedule li {
+    max-width: 250px;
+    justify-content: center;
+} */
+
+
+/* .schedule li {
+    list-style: none;
+} */
+
+.end-text {
+    text-align: center;
+}
+
+.end-text p {
+    margin: 3rem auto;
 }
 
 
