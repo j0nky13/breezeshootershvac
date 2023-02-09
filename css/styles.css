@@ -739,6 +739,7 @@ hr {
 .product-header p {
     margin: auto;
     max-width: 600px;
+    line-height: 1.5;
 }
 
 
@@ -769,6 +770,8 @@ hr {
 
 .extra-services {
     text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
 }
 
 
